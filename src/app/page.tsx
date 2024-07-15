@@ -30,6 +30,7 @@ export default function Home() {
       <MaxWidthWrapper>
         <div className="py-20 mx-auto text-center flex flex-col items-center max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            
             Marketplace for high-quality{" "}
             <span className="text-blue-600">Digital Assets</span>.
           </h1>
@@ -39,6 +40,7 @@ export default function Home() {
             our team to ensure our highest quality standards{" "}
             <span className="text-blue-600"></span>
           </p>
+          
           <div className="flex flex-col sm:flex-row gap-4 mt-6">
             <Link href="/products" className={buttonVariants()}>
               Browse Trending Products

@@ -1,7 +1,7 @@
 export const PRODUCT_CATEGORIES = [
 {
-    label:"Vector Graphics",
-    value:"vector_graphics" as const,
+    label:"UI Kits",
+    value:"ui_kits" as const,
     feature:[
         {
             name:"Editor Top Picks",
