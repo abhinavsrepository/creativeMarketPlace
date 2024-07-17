@@ -11,6 +11,7 @@ import {zodResolver} from "@hookform/resolvers/zod"
 import { toast } from 'sonner'
 import { ZodError } from 'zod'
 import {z} from 'zod'
+import { trpc } from "@/trpc/client";
 const Page = () => {
   const AuthCredentialsValidator = z.object({
     email:z.string().email(),
@@ -26,7 +27,8 @@ const Page = () => {
   } = useForm<TAuthCredentialsValidator>({
     resolver:zodResolver(AuthCredentialsValidator),
   });
-  
+  const {data} = trpc.anyApiRoute.useQuery()
+  console.log(data)
 
       
   const onSubmit = ({
