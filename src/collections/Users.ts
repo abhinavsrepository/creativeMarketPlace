@@ -1,5 +1,7 @@
 import {Access, CollectionConfig} from "payload/types";
 // import {PrimaryActionEmailHtml} from "../components/emails/PrimaryActionEmailHtml"
+import {PrimaryActionEmail} from "../components/emails/PrimaryActionEmail"
+
 const adminsAndUser: Access = ({ req: { user } }) => {
     if (user.role === 'admin') return true
   
@@ -9,12 +11,12 @@ const adminsAndUser: Access = ({ req: { user } }) => {
       },
     }
   }
-  const Users: CollectionConfig ={
+  export const Users: CollectionConfig ={
     slug:"users",
     auth:{
         verify:{
             generateEmailHTML:({token })=>{
-                return PrimaryActionEmailHtml({
+                return PrimaryActionEmail({
                     actionLabel:"verify your account",
                     buttonText:"Verify your account",
                     href: `${process.env.NEXT_PUBLIC_SERVER_URL}/verify-email?token=${token}`
