@@ -4,6 +4,7 @@ import { Icons } from "./Icons";
 import NavItems from "./Navitems";
 import { buttonVariants } from "./ui/button";
 import Cart from "./Cart";
+import Logo from "./logo";
 
 const Navbar = () => {
   const user = null;
@@ -19,6 +20,9 @@ const Navbar = () => {
                 <Link href="/">
                   <Icons.logo className="h-10 w-57" />
                 </Link>
+              </div>
+              <div>
+                
               </div>
 
               <div className="hidden z-50 lg:ml-8 lg:block lg:self-stretch">

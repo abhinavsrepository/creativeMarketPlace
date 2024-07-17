@@ -4,6 +4,7 @@ import { ArrowDownToLine, CheckCircle, Leaf } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+
 const perks = [
   {
     name: "Instant Delicery ",
@@ -48,6 +49,15 @@ export default function Home() {
             <Button variant="ghost">Our quality promise &rarr;</Button>
           </div>
         </div>
+        <div className=" py-10 mx-auto text-center flex flex-col items-center max-w-1xl">
+        <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+            
+            Our Digital Agency Provides best products in market{" "}
+            </h1>
+          
+        </div>
+       
+ 
         {/* to dom list product  */}
       </MaxWidthWrapper>
       <section className="border-t border-gray-200 bg-gray-50">
@@ -77,6 +87,7 @@ export default function Home() {
           </div>
         </MaxWidthWrapper>
       </section>
+      
     </>
   );
 }

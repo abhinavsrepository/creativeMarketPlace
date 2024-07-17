@@ -6,6 +6,7 @@ import { ChevronDown } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
+import Logo from './logo'
 
 type Category = (typeof PRODUCT_CATEGORIES)[number]
 
@@ -75,6 +76,7 @@ const NavItem = ({
                           className='object-cover object-center'
                         />
                       </div>
+                      
 
                       <Link
                         href={item.href}
