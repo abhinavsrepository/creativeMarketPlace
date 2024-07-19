@@ -34,8 +34,7 @@ const Cart = () => {
         </SheetHeader>
         {itemCount > 0 ? (
           <>
-            <div className="flex  w-full flex-col pr-6">
-            
+            <div className="flex w-full flex-col pr-6">
               {/* Todo cart items logic */}
               Cart items
             </div>
@@ -74,18 +73,23 @@ const Cart = () => {
               className="relative mb-4 h-60 w-50 text-muted-foreground"
             >
               <Image
-                src="/hippo-empty-cart.png"
+                src="/hippo-email-sent.png"
                 fill
                 alt="empty shopping cart hippo"
               />
             </div>
             <div className="text-xl font-semibold">Cart is Empty</div>
             <SheetTrigger asChild>
-                <Link href ='/products' className={buttonVariants({
-                    variant:"link",
-                    size:"sm",
-                    className:"text-sm text-muted-foreground"
-                })}>Add item to your cart to Checkout</Link>
+              <Link
+                href="/products"
+                className={buttonVariants({
+                  variant: "link",
+                  size: "sm",
+                  className: "text-sm text-muted-foreground",
+                })}
+              >
+                Add item to your cart to Checkout
+              </Link>
             </SheetTrigger>
           </div>
         )}
